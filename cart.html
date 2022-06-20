@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/fontawesome-free-6.1.1-web/css/all.min.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand p-2 flex-grow-1" href="#"><img src="assets/images/Ai Chips.png" alt="Ai Chips Logos"></a>
+            <a href="cart.html" class="navbar-cart p-2">
+                <i class="fa-solid fa-bag-shopping fa-2x" style="color: #4f4f4f;"></i>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product in Cart -->
+    <div class="container-fluid">
+        <form action="" method="post">
+            <div class="card product-list-cart">
+                <div class="product-cart-left">
+                    <img src="assets/images/tahu.jpg" alt="" class="product-img-cart">
+                    <div class="product-detail-cart">
+                        <h5 class="product-name-cart">Tahu Crispy</h5>
+                        <select name="taste" id="">
+                    <option value="">Pilih Rasa</option>
+                    <option value="BBQ">BBQ</option>
+                    <option value="Balado">Balado</option>
+                    <option value="Keju">Keju</option>
+                    <option value="Lada Hitam">Lada Hitam</option>
+                    <option value="Jagung Manis">Jagung Manis</option>
+                </select>
+                    </div>
+                </div>
+                <div class="product-cart-right">
+                    <h5 class="price">4.000</h5>
+                    <div class="btn-group-dec-inc" id="decrease" onclick="decrease1Value()" value="Decrease Value">
+                        <span class="btn-decrease">
+                            <i class="fa-solid fa-minus text-center"></i>
+                        </span>
+                        <input type="number" name="jumlah" id="number1" value="0" class="input-value text-center">
+                        <span class="btn-increase">
+                            <i class="fa-solid fa-plus text-center" id="increase" onclick="increase1Value()" value="Increase Value"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="card product-list-cart">
+                <div class="product-cart-left">
+                    <img src="assets/images/seblak.jpg" alt="" class="product-img-cart">
+                    <div class="product-detail-cart">
+                        <h5 class="product-name-cart">Seblak Ai Chips</h5>
+                        <select name="taste" id="">
+                            <option value="">Pilih Level</option>
+                            <option value="Level 1">Level 1</option>
+                            <option value="Level 2">Level 2</option>
+                            <option value="Level 3">Level 3</option>
+                            <option value="Level 4">Level 4</option>
+                            <option value="Level 5">Level 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="product-cart-right">
+                    <h5 class="price">10.000</h5>
+                    <div class="btn-group-dec-inc">
+                        <img src="assets/icons/decrease.png" alt="" class="btn-value" id="decrease" onclick="decrease2Value()" value="Decrease Value">
+                        <input type="number" name="jumlah" id="number2" value="0" class="input-value text-center">
+                        <img src="assets/icons/increase.png" alt="" class="btn-value" id="increase" onclick="increase2Value()" value="Increase Value">
+                    </div>
+                </div>
+            </div>
+            <div class="card product-list-cart">
+                <div class="product-cart-left">
+                    <img src="assets/images/tahu.jpg" alt="" class="product-img-cart">
+                    <div class="product-detail-cart">
+                        <h5 class="product-name-cart">Kentang Crispy</h5>
+                        <select name="taste" id="">
+                    <option value="">Pilih Rasa</option>
+                    <option value="BBQ">BBQ</option>
+                    <option value="Balado">Balado</option>
+                    <option value="Keju">Keju</option>
+                    <option value="Lada Hitam">Lada Hitam</option>
+                    <option value="Jagung Manis">Jagung Manis</option>
+                </select>
+                    </div>
+                </div>
+                <div class="product-cart-right">
+                    <h5 class="price">6.000</h5>
+                    <div class="btn-group-dec-inc">
+                        <img src="assets/icons/decrease.png" alt="" class="btn-value" id="decrease" onclick="decrease3Value()" value="Decrease Value">
+                        <input type="number" name="jumlah" id="number" value="0" class="input-value text-center">
+                        <img src="assets/icons/increase.png" alt="" class="btn-value" id="increase" onclick="increase3Value()" value="Increase Value">
+                    </div>
+                </div>
+            </div>
+
+            <div class="add-more-food">
+                <a href="index.html" class="btn-add-more">Add More Food</a>
+            </div>
+
+            <div class="card payment-summary">
+                <h5>Payment Summary</h5>
+                <div class="payment-detail">
+                    <div class="payment pay-price">
+                        <p>Price</p>
+                        <p>32.000</p>
+                    </div>
+                    <div class="payment pay-platform-fee">
+                        <p>Platform Fee</p>
+                        <p>1.000</p>
+                    </div>
+                    <div class="payment pay-discount">
+                        <p>Discount</p>
+                        <p>-3.000</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="payment pay-total">
+                    <h5>Total Payment</h5>
+                    <h5>30.000</h5>
+                </div>
+            </div>
+
+            <div class="order-now">
+                <a href="order.html" class="btn-order-now">Order Now</a>
+            </div>
+
+
+    </div>
+
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/fontawesome-free-6.1.1-web/js/fontawesome.min.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
